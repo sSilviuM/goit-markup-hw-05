@@ -72,6 +72,12 @@ a {
     padding: 0 15px;
 }
 
+.item1:hover,
+.item1:focus,
+.item1.current {
+    color: #2196F3;
+}
+
 .item1:after {
     content: "";
     position: absolute;
@@ -81,16 +87,9 @@ a {
     width: 0;
     left: 0;
     bottom: 0;
-    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.item1:hover,
-.item1:focus {
-    color: #2196F3;
-}
-
-.item1:hover:after,
-.item1:focus:after {
+.item1.current:after {
     width: 100%;
 }
 
@@ -337,7 +336,8 @@ address a:focus {
     border: none;
     border-radius: 5px;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-                color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+                color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-btn:hover,
@@ -345,6 +345,9 @@ address a:focus {
     background-color: #2196F3;
     color: #FFF;
     cursor: pointer;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+                0px 1px 2px 0px rgba(0, 0, 0, 0.08),
+                0px 3px 1px 0px rgba(0, 0, 0, 0.1);
 }
 
 .portfolio-column-item {
@@ -604,7 +607,7 @@ address a:focus {
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.2);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     pointer-events: auto;
 }
 
